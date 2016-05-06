@@ -1,3 +1,74 @@
+nav {
+	height: 80px;
+    position: fixed;
+    background-color: #5fcf80;
+    border-bottom: solid 1px transparent;
+    border-bottom-color: #e9f0f3;
+    top: 0;
+    width: 100%;
+}
+
+.nav-inner-section {
+	max-width: 1030px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.brand {
+    position: relative;
+    top: 18px;
+    text-decoration: none;
+	font-family: Marvel;
+	font-size: 32px;
+	color: white;
+	transition: all 200ms ease-in-out;
+}
+
+.brand:hover {
+	color: #576366;
+	text-decoration: none;
+}
+
+.nav-list {
+    float: right;
+    margin-top: 28px;
+    list-style: none;
+}
+
+
+ul {
+	color: white;
+    font-size: inherit;
+    line-height: 1.6;
+    list-style-position: outside;
+    margin: 0 0 30px 20px;
+    padding: 0;
+}
+
+
+.nav-item {
+    float: left;
+    font-size: 16px;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.nav-anchor {
+    transition: all 200ms ease-in-out;
+    color: white;
+}
+
+.nav-item a:hover {
+	color: #576366;
+	text-decoration: none;
+}
+
+body {
+	padding-top: 60px;
+}
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
