@@ -19,7 +19,7 @@ nav {
     position: relative;
     top: 18px;
     text-decoration: none;
-	font-family: Marvel;
+	font-family: "Raleway";
 	font-size: 32px;
 	color: white;
 	transition: all 200ms ease-in-out;
@@ -57,6 +57,7 @@ ul {
 .nav-anchor {
     transition: all 200ms ease-in-out;
     color: white;
+    font-family: "Raleway";
 }
 
 .nav-item a:hover {
