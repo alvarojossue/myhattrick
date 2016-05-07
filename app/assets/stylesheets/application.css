@@ -2,7 +2,6 @@ nav {
 	height: 80px;
     position: fixed;
     background-color: #5fcf80;
-    border-bottom: solid 1px transparent;
     border-bottom-color: #e9f0f3;
     top: 0;
     width: 100%;
@@ -69,6 +68,50 @@ body {
 	padding-top: 60px;
 }
 
+
+/* ------ VIDEO ------ */
+
+.video {
+	width: 100%;
+	display: block;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: auto;
+	height: auto;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -100;
+	background: transparent url(media/background-video-poster.jpg) no-repeat;
+	background-size: cover;
+}
+
+.video-overlay {
+  /* Overlay style */
+  background-color: #000;
+  opacity: 0.4;
+  /* Stretch to full screen */
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -99;
+}
+
+
+/* -------- VIDEO ------- */
+
+.hero-heading {
+	color: #FFF;
+	font-family: "Raleway";
+	font-size: 100px;
+	text-align: center;
+	font-weight: bolder;
+	padding-top: 150px;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
