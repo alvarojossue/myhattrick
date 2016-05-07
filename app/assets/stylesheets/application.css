@@ -1,7 +1,8 @@
 nav {
 	height: 80px;
     position: fixed;
-    background-color: #5fcf80;
+    background-color: #FFF; /* #5fcf80*/
+    border-bottom: solid 1px transparent;
     border-bottom-color: #e9f0f3;
     top: 0;
     width: 100%;
@@ -20,7 +21,7 @@ nav {
     text-decoration: none;
 	font-family: "Raleway";
 	font-size: 32px;
-	color: white;
+	color: #5fcf80;
 	transition: all 200ms ease-in-out;
 }
 
@@ -37,7 +38,7 @@ nav {
 
 
 ul {
-	color: white;
+	color: #5fcf80;
     font-size: inherit;
     line-height: 1.6;
     list-style-position: outside;
@@ -55,7 +56,7 @@ ul {
 
 .nav-anchor {
     transition: all 200ms ease-in-out;
-    color: white;
+    color: #5fcf80;
     font-family: "Raleway";
 }
 
@@ -66,6 +67,7 @@ ul {
 
 body {
 	padding-top: 60px;
+	font-family: "Raleway";
 }
 
 
@@ -74,7 +76,7 @@ body {
 .video {
 	width: 100%;
 	display: block;
-	position: fixed;
+	position: absolute;
 	right: 0;
 	bottom: 0;
 	width: auto;
@@ -87,11 +89,11 @@ body {
 }
 
 .video-overlay {
-  /* Overlay style */
-  background-color: #000;
-  opacity: 0.4;
+  /* Overlay style #2a633a; */
+  background-color: #202722;
+  opacity: 0.9;
   /* Stretch to full screen */
-  position: fixed;
+  position: absolute;
   right: 0;
   bottom: 0;
   width: auto;
@@ -107,11 +109,113 @@ body {
 .hero-heading {
 	color: #FFF;
 	font-family: "Raleway";
-	font-size: 100px;
+	font-size: 80px;
 	text-align: center;
 	font-weight: bolder;
-	padding-top: 150px;
+	padding-top: 100px;
+	letter-spacing: 1px;
 }
+
+.hero-heading-h2 {
+	color: #FFF;
+	font-family: "Raleway";
+	font-size: 30px;
+	text-align: center;
+	font-weight: lighter;
+	padding-top: 40px;
+	letter-spacing: 1px;
+}
+
+
+.button-signup{
+	text-align: center;
+	padding-top: 50px;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 86px;
+    font-family: "Raleway";
+    font-weight: 300;
+    letter-spacing: 2px;
+    background-color: #43a3e6; #4CAF50
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 2px;
+    color: white;
+}
+
+.container-below-hero {
+	width: 100%;
+	height: 110px;
+	background-color: #32ae55;
+	margin-top: 50px;
+}
+
+.container-goals {
+	height: 500px;
+	background-color: white;
+	width: 100%;
+    max-width: 1224px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+
+.row-goals {
+	font-family: "Raleway";
+}
+
+.question {
+    font-weight: 700;
+    line-height: 80px;
+    font-family: "Raleway";
+    text-align: center;
+    font-size: 50px;
+    margin-top: 40px;
+}
+
+.col-sm-4 {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.goal-text {
+    color: #15181d;
+    font-size: 20px;
+    margin-bottom: 13px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.goal-explanation {
+    line-height: 24px;
+    color: #7a7f85;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 16px;
+    text-align: center;
+}
+
+#footer {
+	background:#43a3e6;
+	width:100%;
+	height:50px;
+	position:absolute;
+}
+
+#footer_text {
+	text-align: center;
+	color: white;
+	font-size: 14px;
+	padding-top: 14px;
+	font-family: "Raleway";
+}
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
