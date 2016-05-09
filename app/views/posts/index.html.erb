@@ -1,10 +1,39 @@
-<h2>Posts for <%= @the_team.name%> </h2>
+<div class="col-md-12 container-cards">
+	<div class="heading-goal-index">
+		<h2>Left foot - News feed: <%=@the_team.name%></p>
+	</div>
+	<div>
+		<ul class="ul-bullet">
+			<% @the_posts.each do |post| %> 
+				<li class="col-md-4">
+					<div class="wrapper">
+			            <div class="card radius shadowDepth1">
+			                <div class="card__image border-tlr-radius">
+			                    <img src="/assets/realmadrid2.jpg" alt="image" class="border-tlr-radius">
+			                </div>
+			                <div class="card__content card__padding">
+			                    <div class="card__meta">
+			                        <a href="#"><%=@the_team.name %></a>
+			                        <time>17th March</time>
+			                    </div>
+			                    <article class="card__article">
+			                        <h2><a href="#"><%= post.title %></a></h2>
+			                        <p><%= post.content %></p>
+			                    </article>
+			                </div>
+			                <div class="card__action">
+			                    <div class="card__author">
+			                        <img src="http://lorempixel.com/40/40/sports/" alt="user">
+			                        <div class="card__author-content">
+			                            Source: <a href="#"><%= post.source %></a>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+		    		</div>
+		    	</li>
+            <% end %>
+       	</ul>
+    </div>
+</div>
 
-	<% @the_posts.each do |post| %>
-			<div class="w3-card-12 w3-margin" style="width:33%">
-				<img src="/assets/realmadrid.jpg" alt="Real Madrid" style="width: 418px;">
-				<div class="w3-container w3-center">
-					<p><%= post.title %></p>
-				</div>
-			</div>
-	<% end %>
