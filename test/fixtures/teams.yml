@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  date_founded: 2016-05-07
+  city: MyString
+  stadium: MyString
+  fans_nickname: MyString
+  country_id: 1
+
+two:
+  name: MyString
+  date_founded: 2016-05-07
+  city: MyString
+  stadium: MyString
+  fans_nickname: MyString
+  country_id: 1

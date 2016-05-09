@@ -1,0 +1,10 @@
+<h2>Posts for <%= @the_team.name%> </h2>
+
+	<% @the_posts.each do |post| %>
+			<div class="w3-card-12 w3-margin" style="width:33%">
+				<img src="/assets/realmadrid.jpg" alt="Real Madrid" style="width: 418px;">
+				<div class="w3-container w3-center">
+					<p><%= post.title %></p>
+				</div>
+			</div>
+	<% end %>

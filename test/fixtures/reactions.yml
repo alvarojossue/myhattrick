@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  statement_id: 1
+  answer: false
+  comment: MyText
+
+two:
+  statement_id: 1
+  answer: false
+  comment: MyText

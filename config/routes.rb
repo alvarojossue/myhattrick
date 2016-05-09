@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+resources :countries do 
+  resources :teams do
+    resources :posts
+    resources :statements do
+      resources :reactions
+      end 
+  end
+end
+
+
+
+
 get '/home' => 'pages#home'
 get '/about' => 'pages#about'
 get '/contact' => 'pages#contact'

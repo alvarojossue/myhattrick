@@ -1,0 +1,14 @@
+<div style="padding-top: 40px;">
+
+<%= form_for [@the_country, @the_team, @the_statement, @the_reaction] do |f| %>
+    <%= f.label :answer %>
+    <%= f.check_box :answer %>
+    <br>
+	<%= f.label :comment %>
+	<%= f.text_field :comment %>
+	<br>
+
+	<%= f.submit "Save" %>
+
+<% end %>
+</div>
