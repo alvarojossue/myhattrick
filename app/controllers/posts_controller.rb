@@ -24,7 +24,15 @@ class PostsController < ApplicationController
 	def create
 		@the_country = Country.find(params[:country_id])
 		@the_team = @the_country.teams.find(params[:team_id])
-		@the_post = @the_team.posts.new(post_params)
+
+		scraper = Webscrapper.new
+		data = scraper.data('http://www.marca.com/en/football/real-madrid/2016/05/09/573037f4e2704e1e538b457f.html')
+		@title = scraper.get_title(data)
+		@image = scraper.get_image(data)
+		@author = scraper.get_author(data)
+
+
+		@the_post = @the_team.posts.new(title: @title, image_url: @image, author: @author)
 		if @the_post.save
 			redirect_to action: 'index', controller: 'posts', team_id: @the_team.id
 		else
@@ -57,6 +65,10 @@ class PostsController < ApplicationController
 	end
 
 	private
+
+	def post_new_params
+
+	end
 
 	def post_params
 		params.require(:post).permit(:title, :image_url, :date, :author, :content, :source)

@@ -1,6 +1,6 @@
 <h1>Article</h1>
 	<h3><%= @the_post.title %></h3>
-	<img src="/assets/realmadrid.jpg">
+	<img src="<%=@the_post.image_url%>">
 	<p><%= @the_post.author %></p>
 	<p> <%= @the_post.date %></p>
 	<p><%= @the_post.source %></p>
