@@ -44,16 +44,19 @@ class Webscrapper < ActiveRecord::Base
 		author
 	end
 
-	def get_date
-		@data.search('.date').map do |element|
-			element.attr('datetime')
+	def get_date(data)
+		date = ""
+		data.search('.date').each do |element|
+			date = element.attr('datetime')
 		end
+		real_date = Date.parse date
 	end
 
-	def get_content
-		@data.search('div[itemprop=articleBody]//p').map do |element|
-			element.inner_text
-			""
+	def get_content(data)
+		content = ""
+		data.search('div[itemprop=articleBody]//p').map do |element|
+			content = content + element.inner_text
 		end
+		content
 	end
 end

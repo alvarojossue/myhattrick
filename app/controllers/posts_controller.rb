@@ -26,13 +26,15 @@ class PostsController < ApplicationController
 		@the_team = @the_country.teams.find(params[:team_id])
 
 		scraper = Webscrapper.new
-		data = scraper.data('http://www.marca.com/en/football/real-madrid/2016/05/09/573037f4e2704e1e538b457f.html')
+		data = scraper.data('http://www.marca.com/en/football/real-madrid/2016/05/08/572f9b69268e3e35638b45d9.html')
 		@title = scraper.get_title(data)
 		@image = scraper.get_image(data)
 		@author = scraper.get_author(data)
+		@date = scraper.get_date(data)
+		@content = scraper.get_content(data)
 
 
-		@the_post = @the_team.posts.new(title: @title, image_url: @image, author: @author)
+		@the_post = @the_team.posts.new(title: @title, image_url: @image, author: @author, date: @date, content: @content)
 		if @the_post.save
 			redirect_to action: 'index', controller: 'posts', team_id: @the_team.id
 		else

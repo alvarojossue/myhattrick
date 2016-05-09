@@ -4,5 +4,9 @@
 	<p><%= @the_post.author %></p>
 	<p> <%= @the_post.date %></p>
 	<p><%= @the_post.source %></p>
-	<p><%= @the_post.content %></p>
+	<% @the_post.content.split('.').each do |sentence| %>
+	<%= "#{sentence}" + "." %>
+	<br>
+	<br>
+	<% end %>
 </div>
