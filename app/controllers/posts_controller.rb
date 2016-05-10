@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 	def index
 		@the_country = Country.find(params[:country_id])
 		@the_team = @the_country.teams.find(params[:team_id])
-		@the_posts = @the_team.posts 
+		@the_posts = @the_team.posts
 		render 'index'
 	end
 
@@ -26,7 +26,8 @@ class PostsController < ApplicationController
 		@the_team = @the_country.teams.find(params[:team_id])
 
 		scraper = Webscrapper.new
-		data = scraper.data('http://www.marca.com/en/football/real-madrid/2016/05/08/572f9b69268e3e35638b45d9.html')
+		@url = params[:url]
+		data = scraper.data(@url)
 		@title = scraper.get_title(data)
 		@image = scraper.get_image(data)
 		@author = scraper.get_author(data)
@@ -34,7 +35,7 @@ class PostsController < ApplicationController
 		@content = scraper.get_content(data)
 
 
-		@the_post = @the_team.posts.new(title: @title, image_url: @image, author: @author, date: @date, content: @content)
+		@the_post = @the_team.posts.new(title: @title, image_url: @image, author: @author, date: @date, content: @content, source: "Marca")
 		if @the_post.save
 			redirect_to action: 'index', controller: 'posts', team_id: @the_team.id
 		else

@@ -1,10 +1,35 @@
-<h2>Statements for <%= @the_team.name%> </h2>
-
-	<% @the_statements.each do |statement| %>
-			<div class="w3-card-12 w3-margin" style="width:33%">
-				<img src="/assets/realmadrid.jpg" alt="Real Madrid" style="width: 418px;">
-				<div class="w3-container w3-center">
-					<p><%= statement.title %></p>
-				</div>
-			</div>
-	<% end %>
+<div class="col-md-12 container-cards">
+	<div class="heading-goal-index">
+		<h2>Right foot - Statements: <%=@the_team.name%></p>
+	</div>
+	<div>
+		<ul class="ul-bullet">
+			<% @the_statements.reverse_each do |statement| %> 
+				<li class="col-md-4">
+					<div class="wrapper">
+			            <div class="card radius shadowDepth1">
+			                <div class="card__image border-tlr-radius">
+			                    <img src="<%= statement.image_url%>" alt="image" class="border-tlr-radius">
+			                </div>
+			                <div class="card__content card__padding">
+			                    <div class="card__meta">
+			                        <a href="#"><%=@the_team.name %></a>
+			                        <time><%= statement.date %></time>
+			                    </div>
+			                    <article class="card__article">
+			                        <h2><a href="#"><%= statement.title %></a></h2>
+			                        <p><%= statement.description.first(150)+ "..." %></p>
+			                    </article>
+			                </div>
+			                <div class="card__action">
+			                    <div class="card__author">
+			                        <img src="http://lorempixel.com/40/40/sports/" alt="user">
+			                    </div>
+			                </div>
+			            </div>
+		    		</div>
+		    	</li>
+            <% end %>
+       	</ul>
+    </div>
+</div>

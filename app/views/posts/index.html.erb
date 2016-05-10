@@ -4,7 +4,7 @@
 	</div>
 	<div>
 		<ul class="ul-bullet">
-			<% @the_posts.each do |post| %> 
+			<% @the_posts.reverse_each do |post| %> 
 				<li class="col-md-4">
 					<div class="wrapper">
 			            <div class="card radius shadowDepth1">
@@ -18,7 +18,7 @@
 			                    </div>
 			                    <article class="card__article">
 			                        <h2><a href="#"><%= post.title %></a></h2>
-			                        <p><%= post.content %></p>
+			                        <p><%= post.content.first(150)+ "..." %></p>
 			                    </article>
 			                </div>
 			                <div class="card__action">

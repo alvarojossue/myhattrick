@@ -4,15 +4,15 @@ class ReactionsController < ApplicationController
 		@the_team = @the_country.teams.find(params[:team_id])
 		@the_statement = @the_team.statements.find(params[:statement_id])
 		@the_reactions = @the_statement.reactions
-		render 'index'
+		render json: reactions
 	end
 
-	def new
+	def create
 		@the_country = Country.find(params[:country_id])
 		@the_team = @the_country.teams.find(params[:team_id])
 		@the_statement = @the_team.statements.find(params[:statement_id])
-		@the_reaction = @the_statement.reactions.new
-		render 'new'
+		@the_reaction = @the_statement.reactions.create(reaction_params)
+		render json: reaction
 	end
 
 	def show
@@ -20,19 +20,12 @@ class ReactionsController < ApplicationController
 		@the_team = @the_country.teams.find(params[:team_id])
 		@the_statement = @the_team.statements.find(params[:statement_id])
 		@the_reaction = @the_statement.reactions.find(params[:id])
-		render 'show'
-	end
-
-	def create
-		@the_country = Country.find(params[:country_id])
-		@the_team = @the_country.teams.find(params[:team_id])
-		@the_statement = @the_team.statements.find(params[:statement_id])
-		@the_reaction = @the_statement.reactions.new(reaction_params)
-		if @the_reaction.save
-			redirect_to action: 'index', controller: 'reactions', statement_id: @the_statement.id 
-		else
-			render 'new'
+		unless reaction 
+			render json: {error: "no reaction found"}
+			status: 404
+			return
 		end
+		render json: reaction
 	end
 
 	private
