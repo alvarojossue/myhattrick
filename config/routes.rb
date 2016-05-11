@@ -1,17 +1,20 @@
 Rails.application.routes.draw do
+  
+  devise_for :views
   devise_for :users
-
-# resources :countries do 
   resources :teams do
     resources :posts
     resources :statements
   end
-# end
+
+  scope "/api" do
+    post "/statements/:id/agree" => "statements#agree"
+    post "/statements/:id/disagree" => "statements#disagree"
+  end
 
 
+  root 'pages#home'
 
-
-get '/home' => 'pages#home'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,29 +1,27 @@
 class StatementsController < ApplicationController
+
+
 	def index
-		@the_country = Country.find(params[:country_id])
-		@the_team = @the_country.teams.find(params[:team_id])
+		@the_team = Team.find(params[:team_id])
 		@the_statements = @the_team.statements 
 		render 'index'
 	end
 
 	def new
-		@the_country = Country.find(params[:country_id])
-		@the_team = @the_country.teams.find(params[:team_id])
+		@the_team = Team.find(params[:team_id])
 		@the_statement = @the_team.statements.new
 		render 'new'
 	end
 
 	def show
-		@the_country = Country.find(params[:country_id])
-		@the_team = @the_country.teams.find(params[:team_id])
+		@the_team = Team.find(params[:team_id])
 		@the_statement = @the_team.statements.find(params[:id])
 		render 'show'
 	end
 
 
 	def create
-		@the_country = Country.find(params[:country_id])
-		@the_team = @the_country.teams.find(params[:team_id])
+		@the_team = Team.find(params[:team_id])
 		@the_statement = @the_team.statements.new(statement_params)
 		if @the_statement.save
 			redirect_to action: 'index', controller: 'statements', team_id: @the_team.id
@@ -33,14 +31,12 @@ class StatementsController < ApplicationController
 	end
 
 	def edit
-		@the_country = Country.find(params[:country_id])
-		@the_team = @the_country.teams.find(params[:team_id])
+		@the_team = Team.find(params[:team_id])
 		@the_statement = @the_team.statements.find(params[:id])
 	end
 
 	def update
-		@the_country = Country.find(params[:country_id])
-		@the_team = @the_country.teams.find(params[:team_id])
+		@the_team = Team.find(params[:team_id])
 		@the_statement = @the_team.statements.find(params[:id])
 		if @the_statement.update(statement_params)
 			redirect_to action: 'index', controller: 'statements', team_id: @the_team.id
@@ -50,10 +46,24 @@ class StatementsController < ApplicationController
 	end
 
 	def destroy
-		@the_country = Country.find(params[:country_id])
-		@the_team = @the_country.teams.find(params[:team_id])
+		@the_team = Team.find(params[:team_id])
 		@the_statement = @the_team.statements.find(params[:id]).destroy
 		redirect_to action: 'index', controller: 'statements', team_id: @the_team.id
+	end
+
+	def agree
+		the_statement = Statement.find(params[:id])
+
+		the_statement.upvote_from current_user
+		render json: {the_statement: the_statement, likes: the_statement.get_upvotes.size, dislikes: the_statement.get_downvotes.size, total: the_statement.votes_for.size}
+
+	end
+
+	def disagree
+		the_statement = Statement.find(params[:id])
+
+		the_statement.downvote_from current_user
+		render json: {the_statement: the_statement, likes: the_statement.get_upvotes.size, dislikes: the_statement.get_downvotes.size, total: the_statement.votes_for.size}
 	end
 
 	private

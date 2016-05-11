@@ -5,8 +5,7 @@
 	<p class="js-brief-description-content"><%= @the_statement.description %></p>
 	<p><%= @the_statement.author %></p>
 	<p> <%= @the_statement.date %></p>
-	<div type="button" class="btn btn-primary js-agree">Agree</div>
-	<div type="button" data-id="" class="btn btn-primary js-disagree">Disagree</div>
-	<p class="js-results">Something</p>
-	<div class="js-comment-section">Comment section</div>
+	<div type="button" class="btn btn-primary js-agree" id="<%=@the_statement.id%>">Agree</div>
+	<div type="button" class="btn btn-primary js-disagree" id="<%=@the_statement.id%>">Disagree</div>
+	<p class="js-results"></p>
 </div>

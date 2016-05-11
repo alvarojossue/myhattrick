@@ -25,12 +25,10 @@
 					<li class="nav-item">
 						<a class="nav-anchor" href="#">Head</a>
 					</li>
-<!-- 					<li class="nav-item">
-						<a class="nav-anchor" href="#">Login</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-anchor" href="#">Signup</a> -->
-					</li>
+  					<li><%= link_to "Log in", new_user_session_path %></li>
+  					<li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+					<li> <a href="">
+  					<li><%= link_to "Sign up", new_user_registration_path%></li>
 				</ul>
 			</section>
 		</nav>
