@@ -74,7 +74,8 @@ $(document).on("ready", function(){
       success: function(data){
       	console.log("SUCCESS");
       	console.log(data)
-      	displayComments(data)
+      	addComment(data)
+
       },
       error: function(error){
         console.log("FAIL");
@@ -123,6 +124,14 @@ function displayComments(theObject){
 	</li>`
 	$(".js-all-comments").append(html)
 	})
+}
+
+function addComment(theObject){
+	var array = theObject.comments
+	var comment = array[array.length - 1].body
+	console.log(comment)
+	var html = `<li> ${comment}</li>`
+	$(".js-all-comments").append(html)
 }
 
 })

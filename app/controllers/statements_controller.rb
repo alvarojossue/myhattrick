@@ -73,7 +73,7 @@ class StatementsController < ApplicationController
 		comment = Comment.build_from(the_statement, the_user.id, "#{content}")
 		comment.save
 		all_comments = the_statement.comment_threads
-		render json: {likes: the_statement.get_upvotes.size, dislikes: the_statement.get_downvotes.size, total: the_statement.votes_for.size, comments: all_comments}
+		render json: {comments: all_comments}
 	end
 
 	private
