@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160511203634) do
+ActiveRecord::Schema.define(version: 20160512184657) do
 
   create_table "countries", force: :cascade do |t|
     t.string   "name"
@@ -105,10 +105,5 @@ ActiveRecord::Schema.define(version: 20160511203634) do
 
   add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope"
   add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
-
-  create_table "webscrappers", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
 end

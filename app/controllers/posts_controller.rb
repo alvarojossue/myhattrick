@@ -21,14 +21,12 @@ class PostsController < ApplicationController
 	def create
 		@the_team = Team.find(params[:team_id])
 
-		scraper = Webscrapper.new
-		@url = params[:url]
-		data = scraper.data(@url)
-		@title = scraper.get_title(data)
-		@image = scraper.get_image(data)
-		@author = scraper.get_author(data)
-		@date = scraper.get_date(data)
-		@content = scraper.get_content(data)
+		scraper = Webscrapper.new(params[:url])
+		@title = scraper.get_title
+		@image = scraper.get_image
+		@author = scraper.get_author
+		@date = scraper.get_date
+		@content = scraper.get_content
 
 
 		@the_post = @the_team.posts.new(title: @title, image_url: @image, author: @author, date: @date, content: @content, source: "Marca")
