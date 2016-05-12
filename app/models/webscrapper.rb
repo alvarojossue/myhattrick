@@ -3,9 +3,6 @@ require 'open-uri'
 class Webscrapper < ActiveRecord::Base
 	attr_reader :url, :data, :get_title
 
-  # def initialize(url)
-  #   @url = url
-  # end
 
   def data(url)
     data = Nokogiri::HTML(open(url))
