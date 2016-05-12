@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   scope "/api" do
     post "/statements/:id/agree" => "statements#agree"
     post "/statements/:id/disagree" => "statements#disagree"
+    post "/statements/:id/comment" => "statements#comment"
   end
 
 
