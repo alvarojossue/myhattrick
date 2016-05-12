@@ -6,6 +6,8 @@ $(document).on("ready", function(){
 		$(".js-brief-description-content").slideToggle();
 	})
 
+	$(".js-submit").hide();
+
 	$(".js-agree").on("click", function(){
 		var selectedStatement = $(".js-agree").prop("id");
 
@@ -17,7 +19,9 @@ $(document).on("ready", function(){
 			success: function (data){
 				console.log(data)
 				showPercentageAgree(data);
+				displayComments(data)
 				hideButtons();
+				showCommentSection();
 
 			},
 			error: function(error){
@@ -38,7 +42,9 @@ $(document).on("ready", function(){
 			success: function (data){
 				console.log(data)
 				showPercentageDisagree(data);
+				displayComments(data)
 				hideButtons();
+				showCommentSection();
 
 			},
 			error: function(error){
@@ -47,6 +53,40 @@ $(document).on("ready", function(){
 			}
 		})
 	})
+
+  $(".js-submit").on("submit", function(event){
+
+    event.preventDefault();
+
+	var selectedStatement = $(".js-disagree").prop("id");
+    var theContent = $("#comment").val();
+    console.log(theContent)
+
+
+	var theComment = {
+      content: theContent,
+    };
+
+    $.ajax({
+      type: "POST",
+      url: `/api/statements/${selectedStatement}/comment`,
+      data: theComment,
+      success: function(data){
+      	console.log("SUCCESS");
+      	console.log(data)
+      	displayComments(data)
+      },
+      error: function(error){
+        console.log("FAIL");
+        console.log("error.responseJSON");
+    }
+    });
+
+  })
+
+
+
+
 
 function showPercentageAgree(theObject){
 	var agree = theObject.likes
@@ -71,7 +111,29 @@ function hideButtons(){
 	$(".js-disagree").hide();
 }
 
+function showCommentSection(){
+	$(".js-submit").show();
+}
 
+function displayComments(theObject){
+	theObject.comments.forEach(function(oneComment){
+	var html = `
+	<li>
+		<p>${oneComment.body}<p>
+	</li>`
+	$(".js-all-comments").append(html)
+	})
+}
 
 })
+
+
+
+
+
+
+
+
+
+
 

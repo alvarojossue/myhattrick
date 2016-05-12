@@ -53,17 +53,27 @@ class StatementsController < ApplicationController
 
 	def agree
 		the_statement = Statement.find(params[:id])
-
+		all_comments = the_statement.comment_threads
 		the_statement.upvote_from current_user
-		render json: {the_statement: the_statement, likes: the_statement.get_upvotes.size, dislikes: the_statement.get_downvotes.size, total: the_statement.votes_for.size}
+		render json: {the_statement: the_statement, likes: the_statement.get_upvotes.size, dislikes: the_statement.get_downvotes.size, total: the_statement.votes_for.size, comments: all_comments}
 
 	end
 
 	def disagree
 		the_statement = Statement.find(params[:id])
-
+		all_comments = the_statement.comment_threads
 		the_statement.downvote_from current_user
-		render json: {the_statement: the_statement, likes: the_statement.get_upvotes.size, dislikes: the_statement.get_downvotes.size, total: the_statement.votes_for.size}
+		render json: {the_statement: the_statement, likes: the_statement.get_upvotes.size, dislikes: the_statement.get_downvotes.size, total: the_statement.votes_for.size, comments: all_comments }
+	end
+
+	def comment
+		the_statement = Statement.find(params[:id])
+		the_user = current_user
+		content = params[:content]
+		comment = Comment.build_from(the_statement, the_user.id, "#{content}")
+		comment.save
+		all_comments = the_statement.comment_threads
+		render json: {likes: the_statement.get_upvotes.size, dislikes: the_statement.get_downvotes.size, total: the_statement.votes_for.size, comments: all_comments}
 	end
 
 	private

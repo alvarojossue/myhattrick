@@ -8,4 +8,17 @@
 	<div type="button" class="btn btn-primary js-agree" id="<%=@the_statement.id%>">Agree</div>
 	<div type="button" class="btn btn-primary js-disagree" id="<%=@the_statement.id%>">Disagree</div>
 	<p class="js-results"></p>
-</div>
+
+    <form class="js-submit">
+      <div>
+        <label for="comment">Comment</label>
+        <input type="text" id="comment" placeholder="place your comment here">
+      </div>
+      <div> 
+        <button type="submit">Add</button>
+      </div>
+    </form>
+
+    <ul class="js-all-comments"></ul>
+  
+
