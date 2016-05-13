@@ -1,18 +1,33 @@
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: "Raleway";
+}
+
+#wrapper {
+    min-height:100%;
+    position:relative;
+}
+
 nav {
 	height: 80px;
-    position: fixed;
-    background-color: #FFF; /* #5fcf80*/
-    border-bottom: solid 1px transparent;
-    border-bottom-color: #e9f0f3;
+    /*position: fixed;*/
+    background-color: #32ae55; /* #5fcf80 #FFF*/
+/*    border-bottom: solid 1px transparent;
+    border-bottom-color: #e9f0f3;*/
     top: 0;
     width: 100%;
 }
 
 .nav-inner-section {
-	max-width: 1030px;
+/*	max-width: 900px;*/
     width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 70px;
+    height: 80px;
 }
 
 .brand {
@@ -21,7 +36,7 @@ nav {
     text-decoration: none;
 	font-family: "Raleway";
 	font-size: 32px;
-	color: #5fcf80;
+	color: #FFF;
 	transition: all 200ms ease-in-out;
 }
 
@@ -34,24 +49,13 @@ nav {
     float: right;
     margin-top: 28px;
     list-style: none;
-    color: #5fcf80;
+    color: #FFF;
     font-size: inherit;
     line-height: 1.6;
     list-style-position: outside;
-    margin: 0 0 30px 20px;
     padding: 0;
 }
 
-
-/*ul {
-	color: #5fcf80;
-    font-size: inherit;
-    line-height: 1.6;
-    list-style-position: outside;
-    margin: 0 0 30px 20px;
-    padding: 0;
-}
-*/
 
 .nav-item {
     float: left;
@@ -60,24 +64,18 @@ nav {
     text-decoration: none;
 }
 
-.nav-anchor {
-    transition: all 200ms ease-in-out;
-    color: #5fcf80;
-    font-family: "Raleway";
-}
 
 .nav-item a:hover {
 	color: #576366;
 	text-decoration: none;
 }
 
-body {
-	padding-top: 60px;
-	font-family: "Raleway";
-/*    margin:0;
-    padding:0;*/
+.nav-item a {
+    color: #FFF
+    transition: all 200ms ease-in-out;
+    color: #FFF;
+    font-family: "Raleway";
 }
-
 
 /* ------ VIDEO ------ */
 
@@ -124,13 +122,30 @@ body {
 }
 
 .hero-heading-h2 {
-	color: #FFF;
+	color: #e9f0f3;
 	font-family: "Raleway";
 	font-size: 30px;
 	text-align: center;
 	font-weight: lighter;
-	padding-top: 40px;
+	padding-top: 60px;
 	letter-spacing: 1px;
+}
+
+.container-below-hero {
+    width: 100%;
+    height: 80px;
+    background-color: #43a3e6;
+    margin-top: 120px;
+}
+
+.below-hero-heading {
+    color: #FFF;
+    font-family: "Raleway";
+    font-size: 25px;
+    text-align: center;
+    font-weight: lighter;
+    padding-top: 27px;
+    letter-spacing: 1px;
 }
 
 
@@ -154,22 +169,16 @@ body {
     color: white;
 }
 
-.container-below-hero {
-	width: 100%;
-	height: 110px;
-	background-color: #32ae55;
-	margin-top: 50px;
-}
 
 .container-goals {
 	height: 500px;
 	background-color: white;
 	width: 100%;
-    max-width: 1224px;
+/*    max-width: 1224px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 30px;
-    padding-left: 30px;
+    padding-left: 30px;*/
 }
 
 
@@ -185,6 +194,18 @@ body {
     text-align: center;
     font-size: 50px;
     margin-top: 40px;
+}
+
+.left-element{
+    padding-top: 60px;
+}
+
+.right-element{
+    padding-top: 60px;
+}
+
+.head-element{
+    padding-top: 60px;
 }
 
 .goal-text {
@@ -204,11 +225,13 @@ body {
     text-align: center;
 }
 
+
+
 #footer {
-	background:#43a3e6;
+	background-color:#32ae55;
 	width:100%;
-	height:50px;
-	position:absolute;
+    position: absolute;
+    height: 50px;
 }
 
 #footer_text {
@@ -218,6 +241,8 @@ body {
 	padding-top: 14px;
 	font-family: "Raleway";
 }
+
+
 
 /* ------------- HEADINGS INDEX -------- */
 

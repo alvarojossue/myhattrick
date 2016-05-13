@@ -11,7 +11,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </head>
 <body>
-
+<div id="wrapper">
+<div class="header">
 <% if user_signed_in?%>
 <div class="row container-fluid">
 		<nav class="nav-container">
@@ -58,10 +59,11 @@
 			</section>
 		</nav>
 	</div>
-
+</div>
 
 	
 <% end %>
+
 
 <%= yield %>
 
@@ -70,6 +72,6 @@
 	<p id="footer_text">Developed with passion, coffee and pizza at Ironhack</p>
 </div>
 
-
+</div>
 </body>
 </html>
