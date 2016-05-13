@@ -1,7 +1,7 @@
 <div class="row">
 <div class="col-md-12 container-cards">
-	<div class="heading-goal-index">
-		<h2>Left foot - News feed: <%=@the_team.name%></h2>
+	<div class="container-below-header">
+    	<h2 class="below-header-heading"><strong>Left foot</strong> - Keep up with the latest <%=@the_team.name%> news!</h2>
 	</div>
 	<div>
 		<ul class="ul-bullet">
@@ -10,21 +10,21 @@
 					<div class="wrapper">
 			            <div class="card radius shadowDepth1">
 			                <div class="card__image border-tlr-radius">
-			                    <img src="<%= post.image_url%>" alt="image" class="border-tlr-radius">
-			                </div>
+			                    <a href="/leftfoot/<%=post.id%>"><img src="<%= post.image_url%>" alt="image" class="border-tlr-radius">
+			                </a></div>
 			                <div class="card__content card__padding">
 			                    <div class="card__meta">
 			                        <a href="#"><%=@the_team.name %></a>
 			                        <time><%= post.date %></time>
 			                    </div>
 			                    <article class="card__article">
-			                        <h2><a href="#"><%= post.title %></a></h2>
+			                        <h2><a href="/leftfoot/<%=post.id%>"><%= post.title %></a></h2>
 			                        <p><%= post.content.first(150)+ "..." %></p>
 			                    </article>
 			                </div>
 			                <div class="card__action">
 			                    <div class="card__author">
-			                        <img src="http://lorempixel.com/40/40/sports/" alt="user">
+			                        <img src="/assets/marca-1.png" alt="user">
 			                        <div class="card__author-content">
 			                            Source: <a href="#"><%= post.source %></a>
 			                        </div>

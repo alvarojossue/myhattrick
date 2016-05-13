@@ -1,4 +1,4 @@
-html,body
+html, body
 {
     width: 100%;
     margin: 0px;
@@ -16,8 +16,8 @@ nav {
 	height: 80px;
     /*position: fixed;*/
     background-color: #32ae55; /* #5fcf80 #FFF*/
-/*    border-bottom: solid 1px transparent;
-    border-bottom-color: #e9f0f3;*/
+    border-bottom: solid 1px transparent;
+    border-bottom-color: #2d9a4c;
     top: 0;
     width: 100%;
 }
@@ -26,7 +26,7 @@ nav {
 /*	max-width: 900px;*/
     width: 100%;
     margin: 0 auto;
-    padding: 0 70px;
+    padding: 0 90px;
     height: 80px;
 }
 
@@ -71,7 +71,6 @@ nav {
 }
 
 .nav-item a {
-    color: #FFF
     transition: all 200ms ease-in-out;
     color: #FFF;
     font-family: "Raleway";
@@ -174,11 +173,12 @@ nav {
 	height: 500px;
 	background-color: white;
 	width: 100%;
+    margin-bottom: 100px;
+    padding-right: 30px;
 /*    max-width: 1224px;
     margin-right: auto;
-    margin-left: auto;
-    padding-right: 30px;
-    padding-left: 30px;*/
+    margin-left: auto;*/
+    padding-left: 30px; 
 }
 
 
@@ -187,13 +187,24 @@ nav {
     text-align: center;
 }
 
+.row-goals a {
+    transition: all 200ms ease-in-out;
+    color: #000;
+}
+
+.row-goals a:hover {
+    color: #576366;
+    text-decoration: none;
+}
+
 .question {
-    font-weight: 700;
+    font-weight: 800;
     line-height: 80px;
     font-family: "Raleway";
     text-align: center;
     font-size: 50px;
-    margin-top: 40px;
+    margin-top: 70px;
+    margin-bottom: 15px;
 }
 
 .left-element{
@@ -242,6 +253,25 @@ nav {
 	font-family: "Raleway";
 }
 
+/* HEADING BELOW  */
+
+.container-below-header {
+    width: 100%;
+    height: 40px;
+    background-color: #43a3e6;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.below-header-heading {
+    color: #FFF;
+    font-family: "Raleway";
+    letter-spacing: 1px;
+    padding-left: 90px;
+    padding-top: 9px;
+    font-size: 20px;
+    font-weight: lighter;
+}
 
 
 /* ------------- HEADINGS INDEX -------- */
@@ -279,9 +309,9 @@ nav {
 
 .wrapper {
     max-width: 400px;
-    margin: 50px auto;
-    padding-left: 1em;
-    padding-right: 1em;
+    margin-top: 10px;
+/*    padding-left: 1em;
+    padding-right: 1em;*/
 }
 
 /**
@@ -314,6 +344,7 @@ nav {
 .card {
     background-color: #fff;
     margin-bottom: 1rem;
+    font-family: "Raleway"
 }
 
 .card__padding {
@@ -352,7 +383,7 @@ nav {
 }
 }
     .card__article a:hover {
-        color: #2980b9;
+        color: #576366;
     }
 
 /* card action */
