@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
   
-  devise_for :views
   devise_for :users
+
+  get "/rightfoot" => "statements#index"
+  get "/rightfoot/new" => "statements#new"
+  get "/rightfoot/:id" => "statements#show"
+  get "/rightfoot/:id/edit" => "statements#edit"
+
+  get "/leftfoot" => "posts#index"
+  get "/leftfoot/new" => "posts#new"
+  get "/leftfoot/:id" => "posts#show"
+  get "/leftfoot/:id/edit" => "posts#edit"
+
+
+
   resources :teams do
     resources :posts
     resources :statements

@@ -1,27 +1,27 @@
 class StatementsController < ApplicationController
-
+before_action :authenticate_user!
 
 	def index
-		@the_team = Team.find(params[:team_id])
+		@the_team = current_user.team
 		@the_statements = @the_team.statements 
 		render 'index'
 	end
 
 	def new
-		@the_team = Team.find(params[:team_id])
+		@the_team = current_user.team
 		@the_statement = @the_team.statements.new
 		render 'new'
 	end
 
 	def show
-		@the_team = Team.find(params[:team_id])
+		@the_team = current_user.team
 		@the_statement = @the_team.statements.find(params[:id])
 		render 'show'
 	end
 
 
 	def create
-		@the_team = Team.find(params[:team_id])
+		@the_team = current_user.team
 		@the_statement = @the_team.statements.new(statement_params)
 		if @the_statement.save
 			redirect_to action: 'index', controller: 'statements', team_id: @the_team.id
@@ -31,12 +31,12 @@ class StatementsController < ApplicationController
 	end
 
 	def edit
-		@the_team = Team.find(params[:team_id])
+		@the_team = current_user.team
 		@the_statement = @the_team.statements.find(params[:id])
 	end
 
 	def update
-		@the_team = Team.find(params[:team_id])
+		@the_team = current_user.team
 		@the_statement = @the_team.statements.find(params[:id])
 		if @the_statement.update(statement_params)
 			redirect_to action: 'index', controller: 'statements', team_id: @the_team.id
@@ -46,7 +46,7 @@ class StatementsController < ApplicationController
 	end
 
 	def destroy
-		@the_team = Team.find(params[:team_id])
+		@the_team = current_user.team
 		@the_statement = @the_team.statements.find(params[:id]).destroy
 		redirect_to action: 'index', controller: 'statements', team_id: @the_team.id
 	end

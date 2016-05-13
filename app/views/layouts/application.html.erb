@@ -11,37 +11,65 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </head>
 <body>
+
+<% if user_signed_in?%>
+<div class="row container-fluid">
+		<nav class="nav-container">
+			<section class="nav-inner-section">
+				<a class= "brand" href="/">myHattrick</a>
+				<ul class="nav-list">
+					<li class="nav-item">
+						<a class="nav-anchor" href="/leftfoot">Left foot</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-anchor" href="/rightfoot">Right foot</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-anchor" href="#">Head</a>
+					</li>
+  					<li class="nav-item">
+  						<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+  					</li>
+				</ul>
+			</section>
+		</nav>
+	</div>
+<% else %>
 	<div class="row container-fluid">
 		<nav class="nav-container">
 			<section class="nav-inner-section">
 				<a class= "brand" href="/">myHattrick</a>
 				<ul class="nav-list">
 					<li class="nav-item">
-						<a class="nav-anchor" href="#">Left foot</a>
+						<a class="nav-anchor" href="/leftfoot">Left foot</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-anchor" href="#">Right foot</a>
+						<a class="nav-anchor" href="/rightfoot">Right foot</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-anchor" href="#">Head</a>
 					</li>
-  					<li><%= link_to "Log in", new_user_session_path %></li>
-  					<li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
-					<li> <a href="">
-  					<li><%= link_to "Sign up", new_user_registration_path%></li>
+  					<li class="nav-item">
+  						<%= link_to "Log in", new_user_session_path %>
+  					</li>
+					<li class="nav-item">
+  					<li class="nav-item"><%= link_to "Sign up", new_user_registration_path%></li>
 				</ul>
 			</section>
 		</nav>
 	</div>
 
 
+	
+<% end %>
+
 <%= yield %>
 
-<!-- 
+
 <div id="footer">
 	<p id="footer_text">Developed with passion, coffee and pizza at Ironhack</p>
 </div>
- -->
+
 
 </body>
 </html>
