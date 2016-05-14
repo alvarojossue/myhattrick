@@ -10,7 +10,7 @@
 					<div class="wrapper">
 			            <div class="card radius shadowDepth1">
 			                <div class="card__image border-tlr-radius">
-			                    <img src="<%= statement.image_url%>" alt="image" class="border-tlr-radius">
+			                    <a href="/rightfoot/<%=statement.id%>"><img src="<%= statement.image_url%>" alt="image" class="border-tlr-radius"></a>
 			                </div>
 			                <div class="card__content card__padding">
 			                    <div class="card__meta">
@@ -18,14 +18,8 @@
 			                        <time><%= statement.date %></time>
 			                    </div>
 			                    <article class="card__article">
-			                        <h2><a href="#"><%= statement.title %></a></h2>
-			                        <p><%= statement.description.first(150)+ "..." %></p>
+			                        <h2><a href="/rightfoot/<%= statement.id%>"><%= statement.title %></a></h2>
 			                    </article>
-			                </div>
-			                <div class="card__action">
-			                    <div class="card__author">
-			                        <img src="http://lorempixel.com/40/40/sports/" alt="user">
-			                    </div>
 			                </div>
 			            </div>
 		    		</div>
