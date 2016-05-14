@@ -459,6 +459,26 @@ nav {
     line-height: 1.5;
 }
 
+
+/* -------------Index show -----------*/
+
+.content-statement {
+    font-family: "Raleway";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.panel-default {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

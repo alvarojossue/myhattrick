@@ -1,12 +1,18 @@
-<h1>Statement</h1>
-	<h3><%= @the_statement.title %></h3>
-	<img src="/assets/realmadrid.jpg">
-	<p class="js-brief-description">Brief description</p>
-	<p class="js-brief-description-content"><%= @the_statement.description %></p>
-	<p><%= @the_statement.author %></p>
-	<p> <%= @the_statement.date %></p>
-	<div type="button" class="btn btn-primary js-agree" id="<%=@the_statement.id%>">Agree</div>
-	<div type="button" class="btn btn-primary js-disagree" id="<%=@the_statement.id%>">Disagree</div>
+<h2 class="title-h2"><%= @the_statement.title %></h2>
+<div class="image">
+  <img src="/assets/realmadrid.jpg">
+</div>
+<br>
+<div class="content-statement">
+	<p class="js-brief-description"><strong>Brief description</strong></p>
+	<div class="js-brief-description-content panel panel-default">
+      <div class="panel-body">
+        <%= @the_statement.description %>
+      </div>
+    </div>
+  </p>
+	<div type="button" class="btn btn-lg btn-default js-agree" id="<%=@the_statement.id%>"><span class="glyphicon glyphicon-thumbs-up"></span> Agree </div>
+	<div type="button" class="btn btn-lg btn-default js-disagree" id="<%=@the_statement.id%>"><span class="glyphicon glyphicon-thumbs-down"></span> Disagree </div>
 	<p class="js-results"></p>
 
     <form class="js-submit">
@@ -20,5 +26,4 @@
     </form>
 
     <ul class="js-all-comments"></ul>
-  
-
+</div>
