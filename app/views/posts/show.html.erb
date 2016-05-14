@@ -1,12 +1,16 @@
-<h1>Article</h1>
-	<h3><%= @the_post.title %></h3>
-	<img src="<%=@the_post.image_url%>">
-	<p><%= @the_post.author %></p>
-	<p> <%= @the_post.date %></p>
-	<p><%= @the_post.source %></p>
-	<% @the_post.content.split('.').each do |sentence| %>
-	<%= "#{sentence}" + "." %>
-	<br>
-	<br>
-	<% end %>
-</div>
+
+	<h2 class="title-h2"><%= @the_post.title %></h2>
+	<div class="image">
+		<img src="<%=@the_post.image_url%>">
+	</div>
+	<div class="content">
+		<em><%= @the_post.author %></em>
+		<p> <%= @the_post.date %></p>
+		<br>
+		<% @the_post.content.split('.').each do |sentence| %>
+			<%= "#{sentence}" + "." %>
+			<br>
+			<br>
+		<% end %>
+		<p><strong>Source:</strong> <a href="http://marca.com"><%= @the_post.source %></a> </p>
+	</div>

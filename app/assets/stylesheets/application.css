@@ -267,10 +267,10 @@ nav {
     color: #FFF;
     font-family: "Raleway";
     letter-spacing: 1px;
-    padding-left: 90px;
     padding-top: 9px;
     font-size: 20px;
     font-weight: lighter;
+    text-align: center;
 }
 
 
@@ -309,7 +309,7 @@ nav {
 
 .wrapper {
     max-width: 400px;
-    margin-top: 10px;
+/*    margin-top: 10px;*/
 /*    padding-left: 1em;
     padding-right: 1em;*/
 }
@@ -410,14 +410,54 @@ nav {
 .ul-bullet {
     list-style-type: none;
 }
-/* --------------------------------------------------*/
- comment box
+/* ------------------------Post show----------------------*/
 
- 
+ .title-h2 {
+    color: #2e2e2e;
+    font-family: "Oswald";
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 0 0 38px;
+    padding-top: 50px;
+    word-wrap: break-word;
+    text-align: center;
+ }
 
+.date-p {
+    font-size: 16px;
+    font-family: "Raleway";
+    text-align: center;
+}
 
+.image {
+    text-align: center;
+}
 
+.content {
+    font-family: "Raleway";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.author {
+    font-family: "Raleway";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.source {
+    font-family: "Raleway";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
