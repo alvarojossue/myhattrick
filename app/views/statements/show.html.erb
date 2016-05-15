@@ -4,7 +4,7 @@
 </div>
 <br>
 <div class="content-statement">
-	<p class="js-brief-description"><strong>Brief description</strong></p>
+	<p class="js-brief-description brief-description"><strong>Brief description</strong>  <span class="js-description-gly glyphicon glyphicon-chevron-down"></span></p>
 	<div class="js-brief-description-content panel panel-default">
       <div class="panel-body">
         <%= @the_statement.description %>
@@ -13,9 +13,46 @@
   </p>
 	<div type="button" class="btn btn-lg btn-default js-agree" id="<%=@the_statement.id%>"><span class="glyphicon glyphicon-thumbs-up"></span> Agree </div>
 	<div type="button" class="btn btn-lg btn-default js-disagree" id="<%=@the_statement.id%>"><span class="glyphicon glyphicon-thumbs-down"></span> Disagree </div>
-	<p class="js-results"></p>
+	<p class="js-results result-h2"></p>
 
-    <form class="js-submit">
+
+<div class="progress js-progress">
+</div>
+
+
+<div class="detailBox js-comment-box">
+<div class="titleBox">
+      <label>Comment Box</label>
+    </div>
+    <div class="actionBox">
+        <ul class="commentList js-all-comments">
+            
+        </ul>
+        <form class="form-inline js-submit" role="form">
+            <div class="form-group">
+                <input class="form-control-b js-input" type="text" placeholder="And why is that?" id="comment" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Add</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <form class="js-submit">
       <div>
         <label for="comment">Comment</label>
         <input type="text" id="comment" placeholder="place your comment here">
@@ -25,5 +62,5 @@
       </div>
     </form>
 
-    <ul class="js-all-comments"></ul>
+    <ul class="js-all-comments ul-bullet"></ul> -->
 </div>

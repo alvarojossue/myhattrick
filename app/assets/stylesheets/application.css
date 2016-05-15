@@ -460,7 +460,7 @@ nav {
 }
 
 
-/* -------------Index show -----------*/
+/* ------------- Statement index-----------*/
 
 .content-statement {
     font-family: "Raleway";
@@ -477,6 +477,123 @@ nav {
     width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* ---------------Statement show ------- */
+
+.result-h2 {
+    font-family: "Oswald";
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.progress {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+.brief-description{
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+/* ----------------Comment box------------------*/
+
+
+@import url(//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css);
+
+
+.form-control-b {
+    display: block;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.detailBox {
+    width:320px;
+    border:1px solid #bbb;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.titleBox {
+    background-color:#fdfdfd;
+    padding:10px;
+}
+.titleBox label{
+  color:#444;
+  margin:0;
+  display:inline-block;
+}
+
+.commentBox {
+    padding:10px;
+    border-top:1px dotted #bbb;
+}
+.commentBox .form-group:first-child, .actionBox .form-group:first-child {
+    width:80%;
+}
+.commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
+    width:18%;
+}
+.actionBox .form-group * {
+    width:100%;
+}
+.taskDescription {
+    margin-top:10px 0;
+}
+.commentList {
+    padding:0;
+    list-style:none;
+    max-height:200px;
+    overflow:auto;
+}
+.commentList li {
+    margin:0;
+    margin-top:10px;
+}
+.commentList li > div {
+    display:table-cell;
+}
+.commenterImage {
+    width:30px;
+    margin-right:5px;
+    height:100%;
+    float:left;
+}
+.commenterImage img {
+    width:100%;
+    border-radius:50%;
+}
+.commentText p {
+    margin:0;
+    text-align: left;
+}
+.sub-text {
+    color:#aaa;
+    font-family:verdana;
+    font-size:11px;
+    text-align: left;
+}
+.actionBox {
+    border-top:1px dotted #bbb;
+    padding:10px;
 }
 
 /*

@@ -3,10 +3,19 @@ $(document).on("ready", function(){
 
 	$(".js-brief-description").on("click", function(){
 		console.log("Wired");
-		$(".js-brief-description-content").slideToggle();
+		$(".js-brief-description-content").slideToggle(400);
+
+		if($(".js-description-gly").hasClass('glyphicon-chevron-down') === true){
+			$(".js-description-gly").removeClass('glyphicon-chevron-down')
+			$(".js-description-gly").addClass('glyphicon-chevron-up')
+		} else {
+			$(".js-description-gly").removeClass('glyphicon-chevron-up')
+			$(".js-description-gly").addClass('glyphicon-chevron-down')
+		}
 	})
 
-	$(".js-submit").hide();
+	$(".js-comment-box").hide();
+	$(".js-progress").hide();
 
 	$(".js-agree").on("click", function(){
 		var selectedStatement = $(".js-agree").prop("id");
@@ -92,19 +101,33 @@ $(document).on("ready", function(){
 function showPercentageAgree(theObject){
 	var agree = theObject.likes
 	var totalReactions = theObject.total
-	var percentage = (agree/totalReactions) * 100
+	var percentage = parseInt((agree/totalReactions) * 100)
 
 	var html = `You + ${percentage}% agree`
+
+	var htmlProgress = `<div class="progress-bar" role="progressbar" aria-valuenow="70"
+  		aria-valuemin="0" aria-valuemax="100" style="width: ${percentage}%">
+  		</div>`
+
+
 	$(".js-results").text(html)
+	$(".js-progress").show();
+	$(".js-progress").append(htmlProgress)
 }
 
 function showPercentageDisagree(theObject){
 	var disagree = theObject.dislikes
 	var totalReactions = theObject.total
-	var percentage = (disagree/totalReactions) * 100
+	var percentage = parseInt((disagree/totalReactions) * 100)
 
 	var html = `You + ${percentage}% disagree`
+	var htmlProgress = `<div class="progress-bar" role="progressbar" aria-valuenow="70"
+  		aria-valuemin="0" aria-valuemax="100" style="width: ${percentage}%">
+  		</div>`
+
 	$(".js-results").text(html)
+	$(".js-progress").show();
+	$(".js-progress").append(htmlProgress)
 }
 
 function hideButtons(){
@@ -113,15 +136,21 @@ function hideButtons(){
 }
 
 function showCommentSection(){
-	$(".js-submit").show();
+	$(".js-comment-box").show();
 }
 
 function displayComments(theObject){
 	theObject.comments.forEach(function(oneComment){
-	var html = `
-	<li>
-		<p>${oneComment.body}<p>
-	</li>`
+	var html = `<li>
+                <div class="commenterImage">
+                  <img src="http://lorempixel.com/50/50/people/9" />
+                </div>
+                <div class="commentText">
+                    <p class=""><strong>Username</strong>: ${oneComment.body}</p> <p class="date sub-text">on March 5th, 2014</p>
+
+                </div>
+            </li>`
+
 	$(".js-all-comments").append(html)
 	})
 }
@@ -130,13 +159,23 @@ function addComment(theObject){
 	var array = theObject.comments
 	var comment = array[array.length - 1].body
 	console.log(comment)
-	var html = `<li> ${comment}</li>`
+	var html = `
+		            <li>
+                <div class="commenterImage">
+                  <img src="http://lorempixel.com/50/50/people/9" />
+                </div>
+                <div class="commentText">
+                    <p class="comment-text"><strong>Username</strong>: ${comment}</p> <p class="date sub-text">on March 5th, 2014</p>
+
+                </div>
+            </li>
+    `
+
 	$(".js-all-comments").append(html)
+	$(".js-input").val(' ')
 }
 
 })
-
-
 
 
 
