@@ -4,11 +4,13 @@ Rails.application.routes.draw do
 
   get "/rightfoot" => "statements#index"
   get "/rightfoot/new" => "statements#new"
+  post "/rightfoot/create" => "posts#create"
   get "/rightfoot/:id" => "statements#show"
   get "/rightfoot/:id/edit" => "statements#edit"
 
   get "/leftfoot" => "posts#index"
   get "/leftfoot/new" => "posts#new"
+  post "/leftfoot/create" => "posts#create"
   get "/leftfoot/:id" => "posts#show"
   get "/leftfoot/:id/edit" => "posts#edit"
 

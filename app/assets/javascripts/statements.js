@@ -141,13 +141,12 @@ function showCommentSection(){
 
 function displayComments(theObject){
 	theObject.comments.forEach(function(oneComment){
-	var user = oneComment.user_id
 	var html = `<li>
                 <div class="commenterImage">
-                  <img src="http://lorempixel.com/50/50/people/9" />
+                  <img src="${oneComment.user.avatar.url}" />
                 </div>
                 <div class="commentText">
-                    <p class=""><strong>${user}</strong>: ${oneComment.body}</p> <p class="date sub-text">on March 5th, 2014</p>
+                    <p class=""><strong>${oneComment.user.name}</strong>: ${oneComment.body}</p> <p class="date sub-text">on ${oneComment.created_at}</p>
                 </div>
             </li>`
 
@@ -157,15 +156,15 @@ function displayComments(theObject){
 
 function addComment(theObject){
 	var array = theObject.comments
-	var comment = array[array.length - 1].body
+	var comment = array[array.length - 1]
 	var user = theObject.user
 	var html = `
 		            <li>
                 <div class="commenterImage">
-                  <img src="http://lorempixel.com/50/50/people/9" />
+                  <img src="${comment.user.avatar.url}" />
                 </div>
                 <div class="commentText">
-                    <p class="comment-text"><strong>${user}</strong>: ${comment}</p> <p class="date sub-text">on March 5th, 2014</p>
+                    <p class="comment-text"><strong>${user}</strong>: ${comment.body}</p> <p class="date sub-text">on ${comment.created_at}</p>
 
                 </div>
             </li>
