@@ -597,16 +597,16 @@ nav {
 }
 
 
-/*--------------------Sign in & Sign up --------------*/
+/*--------------------Sign in, Sign up & Edit views--------------*/
 
-.log-in-form {
+.user-form {
     font-family: "Raleway";
     text-align: center;
     margin-top: 80px;
     padding-bottom: 160px;
 }
 
-.log-in-h2 {
+.user-h2 {
     font-family: "Oswald";
     font-size: 60px;
     font-weight: 700;
@@ -614,14 +614,7 @@ nav {
     margin-bottom: 30px;
 }
 
-.sign-up-form {
-    font-family: "Raleway";
-    text-align: center;
-    margin-top: 80px;
-    padding-bottom: 130px;
-}
-
-.sign-up-h2 {
+.user-h2 {
     font-family: "Oswald";
     font-size: 60px;
     font-weight: 700;
@@ -629,33 +622,7 @@ nav {
     margin-bottom: 30px;
 }
 
-.name {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.email {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.password {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.remember {
-    font-size: 18px;
-    margin-bottom: 20px; 
-}
-
-.team {
-    font-size: 18px;
-    margin-bottom: 20px; 
-}
-
-
-.submit-button {
+.user-element {
     font-size: 18px;
     margin-bottom: 20px;
 }
