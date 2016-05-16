@@ -158,14 +158,14 @@ function displayComments(theObject){
 function addComment(theObject){
 	var array = theObject.comments
 	var comment = array[array.length - 1].body
-	console.log(comment)
+	var user = theObject.user
 	var html = `
 		            <li>
                 <div class="commenterImage">
                   <img src="http://lorempixel.com/50/50/people/9" />
                 </div>
                 <div class="commentText">
-                    <p class="comment-text"><strong>Username</strong>: ${comment}</p> <p class="date sub-text">on March 5th, 2014</p>
+                    <p class="comment-text"><strong>${user}</strong>: ${comment}</p> <p class="date sub-text">on March 5th, 2014</p>
 
                 </div>
             </li>
