@@ -63,7 +63,7 @@ before_action :authenticate_user!
 		the_statement = Statement.find(params[:id])
 		all_comments = the_statement.comment_threads
 		the_statement.downvote_from current_user
-		render json: {the_statement: the_statement, likes: the_statement.get_upvotes.size, dislikes: the_statement.get_downvotes.size, total: the_statement.votes_for.size, comments: all_comments }
+		render json: {the_statement: the_statement, likes: the_statement.get_upvotes.size, dislikes: the_statement.get_downvotes.size, total: the_statement.votes_for.size, comments: all_comments}
 	end
 
 	def comment

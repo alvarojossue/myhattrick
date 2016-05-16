@@ -596,6 +596,46 @@ nav {
     padding:10px;
 }
 
+
+/*--------------------Sign in --------------*/
+
+.log-in-form {
+    font-family: "Raleway";
+    text-align: center;
+    margin-top: 80px;
+    padding-bottom: 160px;
+}
+
+.log-in-h2 {
+    font-family: "Oswald";
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+.email {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.password {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.remember {
+    font-size: 18px;
+    margin-bottom: 20px; 
+}
+
+.submit-button {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

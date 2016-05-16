@@ -141,13 +141,13 @@ function showCommentSection(){
 
 function displayComments(theObject){
 	theObject.comments.forEach(function(oneComment){
+	var user = oneComment.user_id
 	var html = `<li>
                 <div class="commenterImage">
                   <img src="http://lorempixel.com/50/50/people/9" />
                 </div>
                 <div class="commentText">
-                    <p class=""><strong>Username</strong>: ${oneComment.body}</p> <p class="date sub-text">on March 5th, 2014</p>
-
+                    <p class=""><strong>${user}</strong>: ${oneComment.body}</p> <p class="date sub-text">on March 5th, 2014</p>
                 </div>
             </li>`
 
