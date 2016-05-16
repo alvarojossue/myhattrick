@@ -597,7 +597,7 @@ nav {
 }
 
 
-/*--------------------Sign in --------------*/
+/*--------------------Sign in & Sign up --------------*/
 
 .log-in-form {
     font-family: "Raleway";
@@ -614,6 +614,25 @@ nav {
     margin-bottom: 30px;
 }
 
+.sign-up-form {
+    font-family: "Raleway";
+    text-align: center;
+    margin-top: 80px;
+    padding-bottom: 130px;
+}
+
+.sign-up-h2 {
+    font-family: "Oswald";
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.name {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
 
 .email {
     font-size: 18px;
@@ -629,6 +648,12 @@ nav {
     font-size: 18px;
     margin-bottom: 20px; 
 }
+
+.team {
+    font-size: 18px;
+    margin-bottom: 20px; 
+}
+
 
 .submit-button {
     font-size: 18px;
