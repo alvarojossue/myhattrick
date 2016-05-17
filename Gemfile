@@ -27,6 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'carrierwave'
+gem 'figaro'
 gem 'rmagick'
 gem 'fog'
 gem 'sprockets-es6'
