@@ -29,6 +29,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog'
+gem 'sprockets'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
