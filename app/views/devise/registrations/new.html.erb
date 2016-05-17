@@ -38,9 +38,13 @@
         <%= f.collection_select :team_id, Team.all, :id, :name, { :include_blank => "Pick your team"}, {:class=>'team-select'}%>
     </div>
     <div class="actions user-element">
-      <%= f.submit "Sign up" %>
+      <%= f.submit "Sign up", :class => 'button btn-success' %>
     </div>
   <% end %>
 
   <%= render "devise/shared/links" %>
 </div>
+
+
+
+

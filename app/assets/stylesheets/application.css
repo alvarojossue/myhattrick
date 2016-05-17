@@ -635,7 +635,12 @@ nav {
 
 .user-element {
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+#user_avatar{
+    margin-right: 370px;
+    margin-left: auto;
 }
 
 
