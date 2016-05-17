@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   end
 
 
+  get '/header' => 'pages#header'
   root 'pages#home'
 
 

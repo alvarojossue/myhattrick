@@ -638,11 +638,27 @@ nav {
     margin-bottom: 30px;
 }
 
-input[type=file] {
-    display: block;
-    margin-right: 400px;
-    margin-left: auto;
+.hero-heading-header {
+    color: #000;
+    font-family: "Raleway";
+    font-size: 80px;
+    text-align: center;
+    font-weight: bolder;
+    padding-top: 60px;
+    letter-spacing: 1px;
 }
+
+.hero-heading-header-2 {
+    color: #000;
+    font-family: "Raleway";
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder;
+    padding-top: 60px;
+    padding-bottom: 300px;
+    letter-spacing: 1px;
+} 
+
 
 
 /*
