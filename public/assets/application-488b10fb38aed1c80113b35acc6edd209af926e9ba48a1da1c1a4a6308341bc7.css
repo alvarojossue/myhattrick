@@ -1,0 +1,656 @@
+html, body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: "Raleway";
+}
+
+#wrapper {
+    min-height:100%;
+    position:relative;
+}
+
+nav {
+	height: 80px;
+    /*position: fixed;*/
+    background-color: #32ae55; /* #5fcf80 #FFF*/
+    border-bottom: solid 1px transparent;
+    border-bottom-color: #2d9a4c;
+    top: 0;
+    width: 100%;
+}
+
+.nav-inner-section {
+/*	max-width: 900px;*/
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 90px;
+    height: 80px;
+}
+
+.brand {
+    position: relative;
+    top: 18px;
+    text-decoration: none;
+	font-family: "Raleway";
+	font-size: 32px;
+	color: #FFF;
+	transition: all 200ms ease-in-out;
+}
+
+.brand:hover {
+	color: #576366;
+	text-decoration: none;
+}
+
+.nav-list {
+    float: right;
+    margin-top: 28px;
+    list-style: none;
+    color: #FFF;
+    font-size: inherit;
+    line-height: 1.6;
+    list-style-position: outside;
+    padding: 0;
+}
+
+
+.nav-item {
+    float: left;
+    font-size: 16px;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+
+.nav-item a:hover {
+	color: #576366;
+	text-decoration: none;
+}
+
+.nav-item a {
+    transition: all 200ms ease-in-out;
+    color: #FFF;
+    font-family: "Raleway";
+}
+
+/* ------ VIDEO ------ */
+
+.video {
+	width: 100%;
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: auto;
+	height: auto;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -100;
+	background: transparent url(media/background-video-poster.jpg) no-repeat;
+	background-size: cover;
+}
+
+.video-overlay {
+  /* Overlay style #2a633a; */
+  background-color: #202722;
+  opacity: 0.9;
+  /* Stretch to full screen */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -99;
+}
+
+/* -------- VIDEO ------- */
+
+.hero-heading {
+	color: #FFF;
+	font-family: "Raleway";
+	font-size: 80px;
+	text-align: center;
+	font-weight: bolder;
+	padding-top: 60px;
+	letter-spacing: 1px;
+}
+
+.hero-heading-h2 {
+	color: #e9f0f3;
+	font-family: "Raleway";
+	font-size: 30px;
+	text-align: center;
+	font-weight: lighter;
+	padding-top: 60px;
+	letter-spacing: 1px;
+}
+
+.container-below-hero {
+    width: 100%;
+    height: 80px;
+    background-color: #43a3e6;
+    margin-top: 36px;
+}
+
+.below-hero-heading {
+    color: #FFF;
+    font-family: "Raleway";
+    font-size: 25px;
+    text-align: center;
+    font-weight: lighter;
+    padding-top: 27px;
+    letter-spacing: 1px;
+}
+
+
+.button-signup {
+	text-align: center;
+	padding-top: 50px;
+}
+
+.button a {
+    color: white;
+}
+
+.button a:hover {
+    color: #576366;
+    text-decoration: none;
+}
+
+.btn-success {
+    display: inline-block;
+    padding: 13px 86px;
+    font-family: "Raleway";
+    font-weight: 300;
+    letter-spacing: 2px;
+    background-color: #43a3e6;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 2px;
+}
+
+
+.container-goals {
+	height: 500px;
+	background-color: white;
+	width: 100%;
+    margin-bottom: 100px;
+    padding-right: 30px;
+/*    max-width: 1224px;
+    margin-right: auto;
+    margin-left: auto;*/
+    padding-left: 30px; 
+}
+
+
+.row-goals {
+	font-family: "Raleway";
+    text-align: center;
+}
+
+.row-goals a {
+    transition: all 200ms ease-in-out;
+    color: #000;
+}
+
+.row-goals a:hover {
+    color: #576366;
+    text-decoration: none;
+}
+
+.question {
+    font-weight: 800;
+    line-height: 80px;
+    font-family: "Raleway";
+    text-align: center;
+    font-size: 50px;
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+
+.left-element {
+    padding-top: 60px;
+}
+
+.right-element {
+    padding-top: 60px;
+}
+
+.head-element {
+    padding-top: 60px;
+}
+
+.goal-text {
+    color: #15181d;
+    font-size: 20px;
+    margin-bottom: 13px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.goal-explanation {
+    line-height: 24px;
+    color: #7a7f85;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+
+#footer {
+	background-color:#32ae55;
+	width:100%;
+    position: absolute;
+    height: 50px;
+}
+
+#footer_text {
+	text-align: center;
+	color: white;
+	font-size: 14px;
+	padding-top: 14px;
+	font-family: "Raleway";
+}
+
+/* HEADING BELOW  */
+
+.container-below-header {
+    width: 100%;
+    height: 40px;
+    background-color: #43a3e6;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.below-header-heading {
+    color: #FFF;
+    font-family: "Raleway";
+    letter-spacing: 1px;
+    padding-top: 9px;
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+
+/* ------------- HEADINGS INDEX -------- */
+
+.container-cards {
+    background-color: #f2f2f2;
+}
+
+.heading-goal-index {
+    text-align: center;
+    font-size: 40px;
+}
+
+/* ------------------------CARDS----------------------------- */
+
+/*@import 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+@import 'http://fonts.googleapis.com/css?family=Roboto:700,400';*/
+/*
+*  Basic Reset
+*/
+
+
+ 
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**
+ * Basics Styles
+ */
+.col-card {
+    height: 600px;
+}
+
+.col-card-statement {
+    height: 450px;
+}
+
+.wrapper {
+    max-width: 400px;
+/*    margin-top: 10px;*/
+/*    padding-left: 1em;
+    padding-right: 1em;*/
+}
+
+/**
+ * Helpers
+ */
+.border-tlr-radius { 
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px; 
+}
+
+.text-center { text-align: center; }
+
+.radius { border-radius: 2px; }
+
+.padding-tb { padding-top: 1.6rem; padding-bottom: 1.6rem;}
+
+.shadowDepth0 { box-shadow: 0 1px 3px rgba(0,0,0, 0.12); }
+
+.shadowDepth1 {
+   box-shadow: 
+        0 1px 3px rgba(0,0,0, 0.12),
+        0 1px 2px rgba(0,0,0, 0.24);      
+}
+
+
+/**
+ * Card Styles
+ */
+
+.card {
+    background-color: #fff;
+    margin-bottom: 1rem;
+    font-family: "Raleway"
+}
+
+.card__padding {
+    padding: 1.6rem;
+}
+ 
+.card__image {
+    min-height: 100px;
+    background-color: #eee;
+}
+    .card__image img {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+
+.card__content {
+    position: relative;
+}
+
+/* card meta */
+.card__meta time {
+    color: #bbb;
+    margin-left: 0.8rem;
+}
+
+/* card article */
+.card__article a {
+    text-decoration: none;
+    color: #000;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 30px;
+    font-family: "Oswald";
+}
+    .card__article a:hover {
+        color: #576366;
+    }
+
+/* card action */
+.card__action {
+    overflow: hidden;
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
+    padding-bottom: 1.6rem;
+}
+     
+.card__author {}
+
+    .card__author img,
+    .card__author-content {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .card__author img{
+        border-radius: 50%;
+        margin-right: 0.6em;
+    }
+
+.ul-bullet {
+    list-style-type: none;
+}
+/* ------------------------Post show----------------------*/
+
+ .title-h2 {
+    color: #2e2e2e;
+    font-family: "Oswald";
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 0 0 38px;
+    padding-top: 50px;
+    word-wrap: break-word;
+    text-align: center;
+ }
+
+.date-p {
+    font-size: 16px;
+    font-family: "Raleway";
+    text-align: center;
+}
+
+.image {
+    text-align: center;
+}
+
+.content {
+    font-family: "Raleway";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.author {
+    font-family: "Raleway";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.source {
+    font-family: "Raleway";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+
+/* ------------- Statement index-----------*/
+
+.content-statement {
+    font-family: "Raleway";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.panel-default {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---------------Statement show ------- */
+
+.result-h2 {
+    font-family: "Oswald";
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.progress {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+.brief-description{
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+/* ----------------Comment box------------------*/
+
+
+@import url(//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css);
+
+
+.form-control-b {
+    display: block;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.detailBox {
+    border:1px solid #bbb;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.titleBox {
+    background-color:#fdfdfd;
+    padding:10px;
+}
+.titleBox label{
+  color:#444;
+  margin:0;
+  display:inline-block;
+}
+
+.commentBox {
+    padding:10px;
+    border-top:1px dotted #bbb;
+}
+.commentBox .form-group:first-child, .actionBox .form-group:first-child {
+    width:80%;
+}
+.commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
+    width:18%;
+}
+.actionBox .form-group * {
+    width:100%;
+}
+.taskDescription {
+    margin-top:10px 0;
+}
+.commentList {
+    padding:0;
+    list-style:none;
+    max-height:200px;
+    overflow:auto;
+}
+.commentList li {
+    margin:0;
+    margin-top:10px;
+}
+.commentList li > div {
+    display:table-cell;
+}
+.commenterImage {
+    width:30px;
+    margin-right:5px;
+    height:100%;
+    float:left;
+}
+.commenterImage img {
+    width:100%;
+    border-radius:50%;
+}
+.commentText p {
+    margin:0;
+    text-align: left;
+}
+.sub-text {
+    color:#aaa;
+    font-family:verdana;
+    font-size:11px;
+    text-align: left;
+}
+.actionBox {
+    border-top:1px dotted #bbb;
+    padding:10px;
+}
+
+
+/*--------------------Sign in, Sign up & Edit views--------------*/
+
+.user-form {
+    font-family: "Raleway";
+    text-align: center;
+    margin-top: 80px;
+    padding-bottom: 160px;
+}
+
+.user-h2 {
+    font-family: "Oswald";
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.user-h2 {
+    font-family: "Oswald";
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.user-element {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
