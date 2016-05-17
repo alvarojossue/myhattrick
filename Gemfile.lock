@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/babel/ruby-babel-transpiler.git
+  revision: 6878f6edb4e717066bbe344c25b05055cd2d914f
+  specs:
+    babel-transpiler (0.7.0)
+      babel-source (>= 4.0, < 6)
+      execjs (~> 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -46,9 +54,6 @@ GEM
     awesome_nested_set (3.0.3)
       activerecord (>= 4.0.0, < 5)
     babel-source (5.8.35)
-    babel-transpiler (0.7.0)
-      babel-source (>= 4.0, < 6)
-      execjs (~> 2.0)
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -326,6 +331,7 @@ PLATFORMS
 DEPENDENCIES
   acts_as_commentable_with_threading
   acts_as_votable (~> 0.10.0)
+  babel-transpiler!
   byebug
   carrierwave
   devise
@@ -340,7 +346,6 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
-  sprockets (>= 3.0.0)
   sprockets-es6
   sqlite3
   turbolinks

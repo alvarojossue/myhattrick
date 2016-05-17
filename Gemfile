@@ -29,8 +29,8 @@ gem 'devise'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog'
-gem 'sprockets', '>= 3.0.0'
 gem 'sprockets-es6'
+gem 'babel-transpiler', github: 'babel/ruby-babel-transpiler'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

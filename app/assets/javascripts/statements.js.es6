@@ -158,8 +158,7 @@ function addComment(theObject){
 	var array = theObject.comments
 	var comment = array[array.length - 1]
 	var user = theObject.user
-	var html = `
-		            <li>
+	var html = `<li>
                 <div class="commenterImage">
                   <img src="${comment.user.avatar.url}" />
                 </div>
@@ -167,8 +166,7 @@ function addComment(theObject){
                     <p class="comment-text"><strong>${user}</strong>: ${comment.body}</p> <p class="date sub-text">on ${comment.created_at}</p>
 
                 </div>
-            </li>
-    `
+            </li>`
 
 	$(".js-all-comments").append(html)
 	$(".js-input").val(' ')
