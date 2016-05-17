@@ -1,5 +1,4 @@
-html, body
-{
+html, body {
     width: 100%;
     margin: 0px;
     padding: 0px;
@@ -148,12 +147,12 @@ nav {
 }
 
 
-.button-signup{
+.button-signup {
 	text-align: center;
 	padding-top: 50px;
 }
 
-.button a{
+.button a {
     color: white;
 }
 
@@ -214,15 +213,15 @@ nav {
     margin-bottom: 15px;
 }
 
-.left-element{
+.left-element {
     padding-top: 60px;
 }
 
-.right-element{
+.right-element {
     padding-top: 60px;
 }
 
-.head-element{
+.head-element {
     padding-top: 60px;
 }
 
@@ -283,9 +282,10 @@ nav {
 
 /* ------------- HEADINGS INDEX -------- */
 
-.container-cards{
+.container-cards {
     background-color: #f2f2f2;
 }
+
 .heading-goal-index {
     text-align: center;
     font-size: 40px;
@@ -393,7 +393,6 @@ nav {
     font-weight: 700;
     font-size: 30px;
     font-family: "Oswald";
-}
 }
     .card__article a:hover {
         color: #576366;
