@@ -29,7 +29,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'figaro'
 gem 'rmagick'
-gem 'fog'
+gem 'fog-aws'
 gem 'sprockets-es6'
 gem 'babel-transpiler', github: 'babel/ruby-babel-transpiler'
 
