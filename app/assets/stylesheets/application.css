@@ -638,8 +638,9 @@ nav {
     margin-bottom: 30px;
 }
 
-.avatar-img {
-    margin-right: 370px;
+input[type=file] {
+    display: block;
+    margin-right: 400px;
     margin-left: auto;
 }
 
