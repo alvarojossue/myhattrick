@@ -65,7 +65,20 @@ barcelona_url.each do |item|
 
 end
 
+the_team = real_madrid
+the_statement_1 = the_team.statements.new(title: "Real Madrid deserves to win the Champions League", date: Date.new(2016, 5, 17), image_url: "http://e04-marca.uecdn.es/assets/multimedia/imagenes/2016/05/13/14631308640462.jpg", author: "myhattrick", description: "The team has overcome multiple obstacles during this season. A victory at the UEFA Champions League final would be a great recognition for their effort.")
+the_statement_2 = the_team.statements.new(title: "Zizou should still be the head coach next season", date: Date.new(2016, 5, 17), image_url: "http://e04-marca.uecdn.es/assets/multimedia/imagenes/2016/05/13/14631298081782.jpg", author: "myhattrick", description: "With Zizou, the team has recovered confidence, which has also led them to finish the season on its best form.")
+the_statement_3 = the_team.statements.new(title: "Real Madrid should hire Pierre Aubameyang", date: Date.new(2016, 5, 17), image_url: "http://e04-marca.uecdn.es/assets/multimedia/imagenes/2016/03/30/14593587489112.jpg", author: "myhattrick", description: "The striker is one of the best player of the Bundesliga. Additionally, he shared his interest on joining Real Madrid.")
+the_statement_4 = the_team.statements.new(title: "Rafa Benitez was the main reason Real Madrid lost LaLiga", date: Date.new(2016, 5, 17), image_url: "http://e02-marca.uecdn.es/assets/multimedia/imagenes/2016/05/15/14633286944668.jpg", author: "myhattrick", description: "Under his leadership, the team lost key matches and he never managed to improve the atmosphere after.")
+the_statement_5 = the_team.statements.new(title: "Zinadine Zidane is the greatest legend of Real Madrid", date: Date.new(2016, 5, 17), image_url: "http://e03-marca.uecdn.es/assets/multimedia/imagenes/2016/04/24/14614544429103.jpg", author: "myhattrick", description: "He won 'La Novena' as a player, 'La Decima' as an assistant coach and this season he guided the team to the UEFA Champions League final against Atletico de Madrid, where he will try to win 'La Undecima' as the head coach.")
+the_statement_6 = the_team.statements.new(title: "Florentino Perez should resign as president of Real Madrid", date: Date.new(2016, 5, 17), image_url: "http://e03-marca.uecdn.es/assets/multimedia/imagenes/2016/01/26/14538104773071.jpg", author: "myhattrick", description: "Many fans think that the team and the club as a whole needs a new direction as they have only been able to win one league in the last eight years.")
 
+the_statement_1.save
+the_statement_2.save
+the_statement_3.save
+the_statement_4.save
+the_statement_5.save
+the_statement_6.save
 
 
 
