@@ -72,8 +72,7 @@ before_action :authenticate_user!
 		content = params[:content]
 		comment = Comment.build_from(the_statement, the_user.id, "#{content}")
 		comment.save
-		all_comments = the_statement.comment_threads.as_json(include: [:user])
-		render json: {comments: all_comments, user: the_user.name}
+		render json: {comment: comment.as_json(include: [:user]), user: the_user.name}
 	end
 
 	private

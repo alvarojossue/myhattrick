@@ -155,8 +155,7 @@ function displayComments(theObject){
 }
 
 function addComment(theObject){
-	var array = theObject.comments
-	var comment = array[array.length - 1]
+	var comment = theObject.comment
 	var user = theObject.user
 	var html = `<li>
                 <div class="commenterImage">
@@ -173,8 +172,6 @@ function addComment(theObject){
 }
 
 })
-
-
 
 
 
